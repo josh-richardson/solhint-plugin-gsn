@@ -1,4 +1,4 @@
-### solhint-plugin-gsn
+# solhint-plugin-gsn
 This [Solhint](https://github.com/protofire/solhint/) plugin lets you ensure that none of your contracts use `msg.sender` or `msg.data`, specifically intended for use with contracts and codebases which integrate with Gas Station Network, which has specific implementations of these functions. Caveat: the plugin will not be able to scan for usages in imported code from outside your working tree (such as in node_modules) unless you explicitly specify this.
 
 ## Setup
