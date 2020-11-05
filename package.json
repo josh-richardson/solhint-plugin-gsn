@@ -1,0 +1,25 @@
+{
+  "name": "solhint-plugin-gsn",
+  "version": "1.0.0",
+  "description": "A solhint plugin intended for use with contracts which make use of Gas Station Network and therefore cannot use msg.sender or msg.data, and must rather use the GSN-specific implementations of these functions.",
+  "main": "solhint-plugin-gsn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josh-richardson/solhint-plugin-gsn.git"
+  },
+  "keywords": [
+    "solidity",
+    "solhint",
+    "linters",
+    "testing"
+  ],
+  "author": "Joshua Richardson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josh-richardson/solhint-plugin-gsn/issues"
+  },
+  "homepage": "https://github.com/josh-richardson/solhint-plugin-gsn#readme"
+}
