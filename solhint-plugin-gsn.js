@@ -24,7 +24,9 @@ class EnsureGsnCompatible {
     }
 
     ContractDefinition(node) {
-        if (node.kind !== "contract" || !this.gsnImportPath || node.name[1].toUpperCase == node.name[1]) {
+        // disable these errors if contract type is an interface/library, if GSN import path has not been set
+        // or if second letter of contract name is capitalized (likely to be a virtual interface contract)
+        if (node.kind !== "contract" || !this.gsnImportPath || (node.name.startsWith("I") && node.name[1].toUpperCase() === node.name[1])) {
             return;
         }
         this.contractName = node.name
