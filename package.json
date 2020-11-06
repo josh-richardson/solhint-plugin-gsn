@@ -1,25 +1,42 @@
 {
-  "name": "solhint-plugin-gsn",
-  "version": "1.0.1",
-  "description": "A solhint plugin intended for use with contracts which make use of Gas Station Network and therefore cannot use msg.sender or msg.data, and must rather use the GSN-specific implementations of these functions.",
-  "main": "solhint-plugin-gsn.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/josh-richardson/solhint-plugin-gsn.git"
-  },
-  "keywords": [
-    "solidity",
-    "solhint",
-    "linters",
-    "testing"
-  ],
-  "author": "Joshua Richardson",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/josh-richardson/solhint-plugin-gsn/issues"
-  },
-  "homepage": "https://github.com/josh-richardson/solhint-plugin-gsn#readme"
+    "name": "solhint-plugin-gsn",
+    "version": "1.0.2",
+    "description": "A solhint plugin intended for use with contracts which make use of Gas Station Network and therefore cannot use msg.sender or msg.data, and must rather use the GSN-specific implementations of these functions.",
+    "main": "solhint-plugin-gsn.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+        "*.js": ["./node_modules/.bin/eslint --fix", "git add"]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/josh-richardson/solhint-plugin-gsn.git"
+    },
+    "keywords": [
+        "solidity",
+        "solhint",
+        "linters",
+        "testing"
+    ],
+    "author": "Joshua Richardson",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/josh-richardson/solhint-plugin-gsn/issues"
+    },
+    "homepage": "https://github.com/josh-richardson/solhint-plugin-gsn#readme",
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^7.12.1",
+        "eslint-config-prettier": "^6.15.0",
+        "eslint-plugin-prettier": "^3.1.4",
+        "husky": "^4.3.0",
+        "lint-staged": "^10.5.1",
+        "prettier": "^2.1.2"
+    }
 }
