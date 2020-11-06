@@ -49,7 +49,7 @@ class EnsureGsnCompatible {
 
     MemberAccess(node) {
         const mName = node.memberName
-        if (node.expression.name === 'msg' && (mName === 'data', mName === 'sender')) {
+        if (node.expression.name === 'msg' && (mName === 'data' || mName === 'sender')) {
             this.reporter.error(node, this.ruleId, `Avoid to use of msg.${mName} when writing GSN compatible contracts`, fixer => {
                 if (this.inheritance && !this.foundGsnImport && !this.inheritanceWarning) {
                     this.inheritanceWarning = true
